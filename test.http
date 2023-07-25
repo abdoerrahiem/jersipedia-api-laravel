@@ -1,0 +1,14 @@
+POST http://localhost:8000/api/register
+Content-Type: application/json
+
+{
+    "name": "Abdur Rahim",
+    "email": "abdoerrahiem@gmail.com",
+    "password": "123456789",
+    "phone": "089694624299",
+    "completed_address": "jl. bardan nadi, desa pasir panjang",
+    "province": "Kalimantan Barat",
+    "city": "Mempawah"
+}
+
+https://santrikoding.com/tutorial-laravel-jwt-4-membuat-restful-api-register
