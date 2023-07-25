@@ -25,6 +25,8 @@ class User extends Authenticatable
         'completed_address',
         'province',
         'city',
+        'image',
+        'is_admin'
     ];
 
     /**

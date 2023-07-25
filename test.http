@@ -1,14 +1,61 @@
-POST http://localhost:8000/api/register
+### Register User
+POST http://localhost:8000/api/auth/register
 Content-Type: application/json
 
 {
     "name": "Abdur Rahim",
-    "email": "abdoerrahiem@gmail.com",
+    "email": "abdoerrahiem2@gmail.com",
     "password": "123456789",
     "phone": "089694624299",
     "completed_address": "jl. bardan nadi, desa pasir panjang",
     "province": "Kalimantan Barat",
-    "city": "Mempawah"
+    "city": "Mempawah",
+    "is_admin": false
 }
 
-https://santrikoding.com/tutorial-laravel-jwt-4-membuat-restful-api-register
+### Login User
+POST http://localhost:8000/api/auth/login
+Content-Type: application/json
+
+{
+    "email": "abdoerrahiem2@gmail.com",
+    "password": "123456789"
+}
+
+
+### Logout User
+POST http://localhost:8000/api/auth/logout
+Authorization: Bearer 7|iTMnI1Waj6ngeeWJobyJgramoyw3yBPd5ON0ZYA2
+
+### Current User
+GET http://localhost:8000/api/auth/user
+Authorization: Bearer 3|0nCKYTkjJ5LZ4CL0zzEspquFUOy0WrJ7eakIXlKq
+
+### User by ID
+GET http://localhost:8000/api/auth/user/2
+Authorization: Bearer 1|Bvff1UwELDdMhZLauSBbc7mMAmpWPm9QUt0VLFC6
+
+### All Users
+GET http://localhost:8000/api/auth/users?page=1
+Authorization: Bearer 1|Bvff1UwELDdMhZLauSBbc7mMAmpWPm9QUt0VLFC6
+
+### Delete User
+DELETE http://localhost:8000/api/auth/user/2
+Authorization: Bearer 1|Bvff1UwELDdMhZLauSBbc7mMAmpWPm9QUt0VLFC6
+
+### Update User
+PUT http://localhost:8000/api/auth/user/3
+Authorization: Bearer 3|0nCKYTkjJ5LZ4CL0zzEspquFUOy0WrJ7eakIXlKq
+Content-Type: application/json
+
+{
+    "name": "Abdur Rahim Update",
+    "email": "abdoerrahiem2@gmail.com",
+    "password": "123456789",
+    "phone": "089694624299",
+    "completed_address": "jl. bardan nadi, desa pasir panjang",
+    "province": "Kalimantan Barat",
+    "city": "Mempawah",
+    "is_admin": false,
+    "image": "test"
+}
